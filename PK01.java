@@ -1,5 +1,5 @@
 package totallynotpokemon;
 
-public class Pokemon {
+public class PK01 {
     
 }

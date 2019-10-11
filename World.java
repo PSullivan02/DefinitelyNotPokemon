@@ -14,12 +14,14 @@ public class World extends JPanel{
         super();
         p = new Player(800, 600);
         timer = new Timer();
-        timer.scheduleAtFixedRate(new ScheduleTask(), 100, 1000/144);
+        timer.scheduleAtFixedRate(new ScheduleTask(), 100, 1000/15);
     }
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
             this.setBackground(Color.BLACK);
+            g.drawImage(p.img, 0, 350, null);
+            
     }
     private class ScheduleTask extends TimerTask {
 

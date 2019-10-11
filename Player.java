@@ -2,19 +2,23 @@ package totallynotpokemon;
 
 import java.util.*;
 import java.awt.*;
+import javax.swing.ImageIcon;
 
 public class Player {
     private int height, width, x, y, vx, vy, score; 
     private Rectangle bounds;  
-    
-    public Player(int cWidth, int cHeight){
-        this.x = cWidth / 2;
-        this.y = cHeight / 2;
-        this.vx = 0;
-        this.vy = 0;
-        this.width = 30;
-        this.height = 40;
-        this.bounds = new Rectangle(this.x, this.y, this.width, this.height);
+    Image img;
+    private ImageIcon ballThrow;
+        public Player(int cWidth, int cHeight){
+            this.x = cWidth / 2;
+            this.y = cHeight / 2;
+            this.vx = 0;
+            this.vy = 0;
+            this.width = 30;
+            this.height = 40;
+            this.bounds = new Rectangle(this.x, this.y, this.width, this.height);
+            this.ballThrow = new ImageIcon(getClass().getResource("throw.gif"));
+            this.img = ballThrow.getImage();
     }
     public void move(String direction){
         if (direction.equals("right")){
